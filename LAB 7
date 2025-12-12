@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int grade, courseCode;
+    string course;
+
+    cout << "Enter grade: ";
+    cin >> grade;
+    cout << "Enter course code (1-3): ";
+    cin >> courseCode;
+
+    // Determine Pass/Fail
+    if (grade >= 75)
+        cout << "Result: Pass" << endl;
+    else
+        cout << "Result: Fail" << endl;
+
+    // Determine course
+    switch (courseCode) {
+        case 1: course = "Programming 101"; break;
+        case 2: course = "Data Structures"; break;
+        case 3: course = "Algorithms"; break;
+        default: course = "Unknown"; break;
+    }
+
+    cout << "Course: " << course << endl;
+
+    return 0;
+}
